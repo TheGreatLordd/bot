@@ -1,1 +1,1 @@
-myBOTTT
+WIP Discord bot. JS.

@@ -3,8 +3,6 @@ require("dotenv").config();
 
 const fs = require("fs");
 
-
-
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
 });
@@ -20,7 +18,8 @@ const commandsFolders = fs.readdirSync("./src/commands");
   }
 
   client.handleEvents(eventFiles, "./src/events");
-  
+
   client.login(process.env.TOKEN);
 })();
 
+console.log("Async!");
